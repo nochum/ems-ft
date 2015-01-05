@@ -1,0 +1,62 @@
+
+------------------------------------------------------------------------
+tibjmsMsgConsumerPerf SAMPLE -- VERSION: 1.4.0.f0
+------------------------------------------------------------------------
+Server....................... tcp://ip-10-0-10-234:7222,tcp://ip-10-0-10-184:7222
+User......................... tibperf
+Destination.................. tibperf.q.asyn.pub.1234.any.size
+Consumer Threads............. 10
+Consumer Connections......... 10
+Ack Mode..................... CLIENT_ACKNOWLEDGE
+Durable...................... false
+Selector..................... null
+Message Rate................. as fast as possible
+Pace Logic .................. NONE
+SocketSndBuffSize.................. 0
+SocketRcvBuffSize.................. 0
+Default Message Encoding .......... null
+Collecting ACK Statistics .......... no
+Duration (time) .................... unlimited
+Count .............................. 1000000
+Sleep @ Start [static] ..................... 250
+E2E Latency........................ calculate
+Latency JMS Property Field Name.... EMS_PERF_SENDER_TIMESTAMP(string, set via env var TIBCO_EMS_PERF_PROP_NAME_LATENCY)
+Latency Statistic Line Token ...... E2E (string, set via env var TIBCO_EMS_PERF_PRINT_LINE_TOKEN)
+Latency Statistic Output Frequncy . 5 (seconds, set via -histogram N)
+Response Message Size ............. 256 bytes
+Response DeliveryMode ............. NON_PERSISTENT
+Response Expiration ............... 0 ms
+Response Priority ................. 4
+Response Message Format ........... TextMsg
+Response NP Send Check Mode ....... Not set => Determined by EMS server configuration.  (can be set via env var TIBCO_EMS_PERF_NPSEND_CHECK_MODE) 
+Response JMS property closure ..... null (env var TIBCO_EMS_PERF_PROP_NAME_MSGID) 
+Configuration file ................ none. No file (-cfgFile 'fileName') specified or -cfgFile 'none' used. Using default settings.
+Loading PLUGIN objects ............ false. Depends if one has at least one -load:plugin 'className' command line argument
+Started @ DateTime with Timezone .. 2014-12-31 12:35:23.888 EST -0500
+------------------------------------------------------------------------
+
+Latency Statistic end-to-end ...... com.tibco.cts.lib.stats.SimpleStatisticThreadSafe (1.1.0 using com.tibco.cts.lib.stats.SimpleStatistic/1.2.0) @ 5 seconds
+
+------------------------------------------------------------------------
+
+#INFO	2014-12-31 12:35:24.173	1420047324173	THREAD[27]	All threads are ready, set, go ...
+
+
+
+#INFO	2014-12-31 12:37:44.897	[consumer] STOPPED (thread # 26). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.067	[consumer] STOPPED (thread # 19). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.200	[consumer] STOPPED (thread # 24). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.322	[consumer] STOPPED (thread # 20). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.372	[consumer] STOPPED (thread # 23). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.550	[consumer] STOPPED (thread # 21). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.639	[consumer] STOPPED (thread # 18). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:45.840	[consumer] STOPPED (thread # 25). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...
+
+#INFO	2014-12-31 12:37:46.113	[consumer] STOPPED (thread # 27). Processed 100000 msgs and 0 bytes. Stopped consuming messages and timing. Closing all consumers/subscriptions ...

@@ -1,0 +1,54 @@
+
+------------------------------------------------------------------------
+tibjmsMsgProducerPerf SAMPLE -- VERSION: 1.7.0.f0 - thread # 1
+------------------------------------------------------------------------
+Server....................... tcp://ip-10-0-10-234:7222,tcp://ip-10-0-10-184:7222
+User......................... tibperf
+Destination.................. tibperf.q.asyn.pub.1234.any.size
+Message Size................. 256
+Count........................ 1000000
+Production Threads........... 1
+Production Connections....... 1
+DeliveryMode................. PERSISTENT
+Compression.................. false
+Message Rate................. as fast as possible
+Pace Logic .................. NONE
+Transaction Size............. 100
+SocketSndBuffSize.................. 0
+SocketRcvBuffSize.................. 0
+Default Message Encoding .......... null
+Integer JMS properties ............ TEST_MAP_BUCKET
+Send Latency....................... calculate
+Latency JMS Property Field Name.... EMS_PERF_SENDER_TIMESTAMP(string, set via env var TIBCO_EMS_PERF_PROP_NAME_LATENCY)
+Latency Statistic Line Token ...... SND (string, set via env var TIBCO_EMS_PERF_PRINT_LINE_TOKEN)
+Latency Statistic Output Frequncy . 5 (seconds, set via -histogram N)
+Message Expiration ................ 0 ms
+Message Priority .................. 4
+NP Send Check Mode................. Not set => Determined by EMS server configuration.  (can be set via env var TIBCO_EMS_PERF_NPSEND_CHECK_MODE) 
+Send Message ID disabled .......... null (set via env var TIBCO_EMS_PERF_DISABLE_MESSAGE_ID=true|false, default: false) 
+Send Message Timestamp disabled ... null (set via env var TIBCO_EMS_PERF_DISABLE_MESSAGE_TIMESTAMP=true|false, default: false) 
+Inactive Connection Ping Interval . null (in seconds, set via env var TIBCO_EMS_PERF_CONNECTION_PING_INTERVAL) 
+APP UUID .......................... dc703c0a-0a27-4870-a409-085d17d8e537
+Setting JMSReplyTo ................ false 
+Response JMS property closure ..... null (env var TIBCO_EMS_PERF_PROP_NAME_MSGID) 
+Message Format .................... BytesMsg
+Send Option ....................... CREATE; set via -send:option <create|skip|repeat|modify>
+Configuration file ................ none. No file (-cfgFile 'fileName') specified or -cfgFile 'none' used. Using default settings.
+Loading PLUGIN objects ............ false. Depends if one has at least one -load:plugin 'className' command line argument
+Tracing time ...................... NO
+Tracing size ...................... NO
+Update wire-message size .......... true (set via env var TIBCO_EMS_PERF_UPDATE_WIRE_MSGSIZE=true|false) 
+Started @ DateTime with Timezone .. 2014-12-31 12:35:25.140 EST -0500
+------------------------------------------------------------------------
+
+Latency Statistic ................. com.tibco.cts.lib.stats.SimpleStatisticThreadSafe (1.1.0 using com.tibco.cts.lib.stats.SimpleStatistic/1.2.0) @ 5 seconds
+
+------------------------------------------------------------------------
+
+#INFO	2014-12-31 12:35:25.469	1420047325469	THREAD[9]	All threads are ready, set, go ...
+
+#INFO	2014-12-31 12:36:23.473	[producer] DONE (thread # 1). Stopped sending messages and timing. Closing all connections ...
+
+#INFO	2014-12-31 12:36:23.476	[producer] FINISHED (thread # 1). All connections are closed.
+
+2014-12-31 12:36:23.727	PERFInfo	1	1	PERSISTENT	256	1000001	57.738	17319.63	msgs/s	4.22	MiB/s	7.03	MiB/s	tibperf.q.asyn.pub.1234.any.size	3		0.0 %	0.0 %	0	0	58256	1	0	0	0.0 %
